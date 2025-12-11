@@ -42,12 +42,14 @@
 ### 核心技术依赖
 - **基础模型**：文心大模型 4.0（文本生成、OCR、语义理解）
 - **开发工具**：文心快码、Vibe Coding、移动应用开发框架
-- **关键能力**：多智能体框架、OCR识别引擎、流程自动化、双端数据同步、电子签章API
+- **关键能力**：多智能体框架、MCP工具、OCR识别引擎、流程自动化、双端数据同步、电子签章API、文件管理系统
 
 ### 分层架构设计
 1. **接入层**：WEB响应式界面 + APP轻量化界面 + 多模态输入
-2. **核心层**：多智能体系统（调度Agent、采购/销售Agent、知识库管理Agent等）
-3. **存储层**：合同知识库、文件库、操作日志库、系统配置库
+2. **核心层**：
+   - 多智能体系统（调度Agent、采购/销售Agent、知识库管理Agent等）
+   - MCP工具系统（多模态内容处理、流程自动化）
+3. **文件管理层**：合同知识库、文件库、操作日志库、系统配置库（基于文件管理系统）
 
 ---
 
@@ -56,7 +58,10 @@
 smart-contract-platform/
 ├── web/                 # WEB端前端代码
 ├── mobile/              # APP端代码（iOS/Android）
-├── server/              # 后端服务（智能体调度、API等）
+├── server/              # 后端服务（API网关、业务逻辑）
+├── agent-service/       # AGENT框架服务（智能体调度、多Agent协作）
+├── mcp-service/         # MCP工具服务（多模态内容处理、流程自动化）
+├── ai-service/          # AI服务（文心大模型调用、OCR识别）
 ├── knowledge-base/      # 采购/销售合同知识库
 ├── docs/                # 项目文档
 └── README.md
@@ -88,9 +93,10 @@ npm run dev
 ```
 
 ### 配置说明
-1. 在 `config/` 目录下配置API密钥、数据库连接等
+1. 在各服务目录下配置API密钥、文件存储路径等（参考各目录下的`.env.example`）
 2. 初始化知识库：运行 `scripts/init-knowledge-base.py`
-3. 启动双端服务：参考 `docs/setup.md`
+3. 初始化文件管理系统：运行 `npm run init:file-index`（在server目录下）
+4. 启动服务：参考 `docs/setup.md`
 
 ---
 
