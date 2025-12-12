@@ -1,0 +1,35 @@
+.ant-layout {
+  background: #fff;
+}
+
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ant-card {
+  margin-bottom: 24px;
+}
+
+.ant-btn {
+  margin-bottom: 12px;
+}
+
+.ant-typography {
+  margin-bottom: 16px;
+}
+
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 16px;
+}
+
+.ant-row {
+  margin-bottom: 16px;
+}
+
+.ant-col {
+  margin-bottom: 16px;
+}
