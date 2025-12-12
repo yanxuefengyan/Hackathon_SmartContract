@@ -1,8 +1,12 @@
-```markdown
+
 # 智合同 SmartContract  
 **AI双端协同平台：采购+销售合同全流程智能生成与审核系统**
 
 > 基于文心大模型的智能合同处理平台，覆盖采购与销售双场景，实现“报价单→合同→审核→盖章”全流程自动化，支持WEB与APP双端协同。
+
+项目演示视频：
+
+GITHUB地址：https://github.com/yanxuefengyan/Hackathon_SmartContract.git
 
 ---
 
